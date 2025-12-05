@@ -65,3 +65,22 @@ Install dependencies:
 
 ```bash
 pip install yfinance pandas matplotlib
+
+## ▶️ How to Run the Scripts
+
+### 1. Get the latest NVDA quote
+```bash
+python nvda_quote.py
+```
+
+### 2. Start automatic logging
+```bash
+python nvda_logger.py
+```
+
+### 3. Generate the visualization
+```bash
+python nvda_plot.py
+```
+
+
