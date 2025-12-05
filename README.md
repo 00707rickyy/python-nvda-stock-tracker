@@ -82,5 +82,40 @@ python nvda_logger.py
 ```bash
 python nvda_plot.py
 ```
+---
+
+## 📂 Project Structure
+
+```
+nvda-stock-tracker/
+│
+├── nvda_quote.py          # Fetch latest NVDA price
+├── nvda_logger.py         # Log price every minute into CSV
+├── nvda_plot.py           # Plot data as a time-series chart
+├── nvda_plot.png          # Example visualization image
+└── nvda_log_sample.csv    # (Optional) A small sample of logged data
+```
+---
+##  What I Learned
+
+- How to retrieve stock market data using the `yfinance` API  
+- How to build automated logging scripts and handle CSV writing  
+- Working with time-series data in `pandas`  
+- Creating visualizations using `matplotlib`  
+- Understanding file locking issues and CSV header handling  
+- Structuring a clean and professional GitHub project  
+- Improving Python automation and data analysis workflow design  
+
+---
+##  Possible Future Improvements
+
+- Add support for multiple tickers instead of only NVDA  
+- Calculate technical indicators (MA, EMA, RSI, MACD)  
+- Build a dashboard using Streamlit or Flask  
+- Implement alerts: send LINE/Email notifications when price moves  
+- Replace CSV storage with SQL database (SQLite / PostgreSQL / Oracle)  
+- Add scheduler so the logger runs automatically during US market hours  
+- Deploy visualization as a small web app  
+
 
 
