@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def load_data(filename: str = "nvda_log.csv") -> pd.DataFrame:
-    # 嘗試直接讀，如果冇 'time' 就用手動欄名
+    # 如果冇 'time' 就用手動欄名
     df = pd.read_csv(filename)
 
     if "time" not in df.columns:
@@ -18,21 +18,18 @@ def load_data(filename: str = "nvda_log.csv") -> pd.DataFrame:
 
 def plot_price(df: pd.DataFrame) -> None:
     plt.figure(figsize=(10, 5))
-
-    # 畫時間對價格線圖
     plt.plot(df["time"], df["price"], label="NVDA price")
     plt.xlabel("Time")
     plt.ylabel("Price (USD)")
     plt.title("NVDA price over time (logged from yfinance)")
     plt.legend()
-    # 令 x 軸時間標籤唔會重疊咁嚴重
     plt.gcf().autofmt_xdate()
     plt.tight_layout()
     plt.show()
 
 def main():
     df = load_data("nvda_log.csv")
-    print(df.head())  # 順便喺 terminal 睇下頭幾行確認格式
+    print(df.head()) 
     plot_price(df)
     
 def plot_price(df: pd.DataFrame) -> None:
@@ -50,4 +47,5 @@ def plot_price(df: pd.DataFrame) -> None:
 
 if __name__ == "__main__":
     main()
+
 
